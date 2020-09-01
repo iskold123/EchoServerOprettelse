@@ -4,6 +4,7 @@ using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EchoServer
@@ -27,6 +28,7 @@ namespace EchoServer
                 //DoClient(socket);
                 //socket.Close();
 
+                //Concurrent starter socketTests hurtigere fordi der ikke er 5 sek ventetid.
                 Task.Run(() =>
                 {
                     TcpClient tempSocket = socket;
@@ -44,12 +46,13 @@ namespace EchoServer
 
             // læser fra klient
             String str = sr.ReadLine();
+
             Console.WriteLine($"Server input: {str}");
 
             // sender tilbage til klient
             sw.WriteLine(str);
             sw.Flush(); // Tømmer buffer
-
+            Thread.Sleep(5000);
             socket.Close();
         }
     }
