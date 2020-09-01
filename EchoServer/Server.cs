@@ -28,7 +28,7 @@ namespace EchoServer
                 //DoClient(socket);
                 //socket.Close();
 
-                //Concurrent starter socketTests hurtigere fordi der ikke er 5 sek ventetid.
+                //Concurrent; starter socketTests hurtigere fordi der ikke er 5 sek ventetid.
                 Task.Run(() =>
                 {
                     TcpClient tempSocket = socket;
@@ -52,7 +52,7 @@ namespace EchoServer
             // sender tilbage til klient
             sw.WriteLine(str);
             sw.Flush(); // Tømmer buffer
-            Thread.Sleep(5000);
+            //Thread.Sleep(5000);
             socket.Close();
         }
     }
