@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30104.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoServer", "EchoServer\EchoServer.csproj", "{52A8956D-B705-4456-A9C2-B9140CED2FBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EchoServer", "EchoServer\EchoServer.csproj", "{52A8956D-B705-4456-A9C2-B9140CED2FBF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EchoClient", "EchoClient\EchoClient.csproj", "{9E2F69B8-C5C0-41A0-9C28-9AF45A8709B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{52A8956D-B705-4456-A9C2-B9140CED2FBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{52A8956D-B705-4456-A9C2-B9140CED2FBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{52A8956D-B705-4456-A9C2-B9140CED2FBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E2F69B8-C5C0-41A0-9C28-9AF45A8709B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E2F69B8-C5C0-41A0-9C28-9AF45A8709B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E2F69B8-C5C0-41A0-9C28-9AF45A8709B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E2F69B8-C5C0-41A0-9C28-9AF45A8709B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
