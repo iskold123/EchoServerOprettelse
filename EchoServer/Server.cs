@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Net;
 using System.Net.Sockets;
@@ -14,7 +15,7 @@ namespace EchoServer
         public void Start()
         {
             // Opretter server, IP "ekko"
-            TcpListener server = new TcpListener(IPAddress.Loopback, 7777);
+            TcpListener server = new TcpListener(IPAddress.Loopback, 3001);
 
             //starter server;
             server.Start();
@@ -46,11 +47,14 @@ namespace EchoServer
 
             // læser fra klient
             String str = sr.ReadLine();
+            
+            string[] strings = str.Split(' ');
+            double i = double.Parse(strings[1], new CultureInfo("da-DK")); 
+            double j = double.Parse(strings[2], new CultureInfo("da-DK"));
 
-            Console.WriteLine($"Server input: {str}");
 
             // sender tilbage til klient
-            sw.WriteLine(str);
+            sw.WriteLine(i+j);
             sw.Flush(); // Tømmer buffer
             //Thread.Sleep(5000);
             socket.Close();

@@ -24,7 +24,7 @@ namespace EchoClient
             sw.WriteLine(str);
             sw.Flush(); // Tømmer buffer
 
-
+            socket.Close();
 
         }
     }
