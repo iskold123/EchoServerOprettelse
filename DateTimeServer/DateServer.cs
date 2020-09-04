@@ -53,7 +53,11 @@ namespace DateTimeServer
 
             sw.Flush();
 
-            //socket.Close();
+            /* Kan undlades, hvis man ønsker at kunne sende
+            * flere beskeder af gangen i SocketTest
+            * send følgende til SocketTest for test; Timestamp&2019-09-03 14:23
+            */
+            socket.Close();
         }
     }
 }
